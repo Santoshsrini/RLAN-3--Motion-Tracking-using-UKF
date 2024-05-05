@@ -25,10 +25,9 @@ For position and orientation X, Y, and Z, the UKF seems to have performed well, 
 
 ### Part 1 Results - Dataset 4:
 
-The position and orientations predictions  are fairly accurate with the predicted values closely following the actual values across all axes. Velocity in the X and Z axes follows the actual values quite well, while there are some discrepancies in the Y-axis.The bias of the gyroscope shows more noise compared to Dataset 1 but less dramatic spikes. There is a clear upward trend in the bias on the Y-axis, which could point to a systematic error in the gyroscope or a change in the sensor's operating conditions.
-
 <img width="1228" alt="image" src="https://github.com/Santoshsrini/RLAN-3--Motion-Tracking-using-UKF/assets/28926309/703efb78-eba1-44a1-b7ef-476bdc5433f8">
 
+The position and orientations predictions  are fairly accurate with the predicted values closely following the actual values across all axes. Velocity in the X and Z axes follows the actual values quite well, while there are some discrepancies in the Y-axis.The bias of the gyroscope shows more noise compared to Dataset 1 but less dramatic spikes. There is a clear upward trend in the bias on the Y-axis, which could point to a systematic error in the gyroscope or a change in the sensor's operating conditions.
 
 
 
