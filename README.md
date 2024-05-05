@@ -20,14 +20,37 @@ Once the predicted mean and co-variance is computed, the update using the pose m
 
 <img width="1222" alt="image" src="https://github.com/Santoshsrini/RLAN-3--Motion-Tracking-using-UKF/assets/28926309/d9902f82-4330-4ce6-9ba6-6ca20a8337b3">
 
-
-For position and orientation X, Y, and Z, the UKF seems to have performed well, with the predicted values closely following the actual values. The velocity predictions are reasonable but show some deviation, especially noticeable in the X-axis. There's a significant spike in bias gyroscope X and Y axes and a noticeable drift in the Z-axis, which suggests that there may be unmodeled dynamics or sensor errors affecting the gyroscope readings.
-
 ### Part 1 Results - Dataset 4:
 
 <img width="1228" alt="image" src="https://github.com/Santoshsrini/RLAN-3--Motion-Tracking-using-UKF/assets/28926309/703efb78-eba1-44a1-b7ef-476bdc5433f8">
 
-The position and orientations predictions  are fairly accurate with the predicted values closely following the actual values across all axes. Velocity in the X and Z axes follows the actual values quite well, while there are some discrepancies in the Y-axis.The bias of the gyroscope shows more noise compared to Dataset 1 but less dramatic spikes. There is a clear upward trend in the bias on the Y-axis, which could point to a systematic error in the gyroscope or a change in the sensor's operating conditions.
+
+## Part 2:
+
+### Prediction: 
+
+Exactly same as part 1.
+
+### Update:
+
+Since measurement model is non linear because of transformation of frame from world to camera as the actual measurement is in camera frame,  update is done using Unscented transform
+
+Step1: Compute sigma points
+Step 2: Propagate sigma points through the nonlinear function g:
+Step 3: Compute the mean and covariance
+Step 4: Update using Kalman Gain: 
+
+### Part 2 Results - Dataset 1:
+
+<img width="1200" alt="image" src="https://github.com/Santoshsrini/RLAN-3--Motion-Tracking-using-UKF/assets/28926309/5bcedf69-724f-4857-a20d-423dd9f16849">
+
+
+### Part 2 Results - Dataset 2:
+
+<img width="1218" alt="image" src="https://github.com/Santoshsrini/RLAN-3--Motion-Tracking-using-UKF/assets/28926309/afeabf7d-5ed5-448c-afa7-3d5e1e5d1391">
+
+
+
 
 
 
